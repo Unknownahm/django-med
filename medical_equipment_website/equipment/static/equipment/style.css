@@ -1,6 +1,12 @@
 /* Style for the product container */
 
-body, h1, h2, h3, p, ul, li {
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
@@ -13,7 +19,7 @@ body, h1, h2, h3, p, ul, li {
   /* max-width: 1200px; */
   margin: 0 auto;
   padding: 20px;
-  background-color: #FDF6EC;
+  background-color: #fdf6ec;
   /* white-space: nowrap; */
   overflow-x: auto;
 }
@@ -58,6 +64,8 @@ body, h1, h2, h3, p, ul, li {
   font-size: 24px;
 }
 
+
+
 /* Style for product description */
 .product-description {
   margin-top: 5px;
@@ -90,9 +98,8 @@ body, h1, h2, h3, p, ul, li {
   color: #007bff;
 }
 
-
 .main-header {
-  background-color: #1B1A17;
+  background-color: #1b1a17;
   color: #fff;
   padding: 20px;
   display: flex;
@@ -102,8 +109,10 @@ body, h1, h2, h3, p, ul, li {
 
 /* Style the logo */
 .logo {
-  font-size: 24px;
-  font-weight: bold;
+  font-family: "Andalus";
+  font-size: 28px;
+  border: 1px solid gold;
+  animation: gradientBorder 4s linear infinite;
 }
 
 .logo:hover {
@@ -135,7 +144,6 @@ body, h1, h2, h3, p, ul, li {
 .scrolled {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-
 
 .main-header {
   padding-top: 50px;
@@ -174,3 +182,21 @@ body, h1, h2, h3, p, ul, li {
   pointer-events: none;
 }
 /* ------------------------- SEARCHBAR styles ------------------------- */
+
+@keyframes gradientBorder {
+  0% {
+    border-image: linear-gradient(45deg, #f06, #fc0) 1;
+  }
+  25% {
+    border-image: linear-gradient(135deg, #f06, #fc0) 1;
+  }
+  50% {
+    border-image: linear-gradient(225deg, #f06, #fc0) 1;
+  }
+  75% {
+    border-image: linear-gradient(315deg, #f06, #fc0) 1;
+  }
+  100% {
+    border-image: linear-gradient(45deg, #f06, #fc0) 1;
+  }
+}

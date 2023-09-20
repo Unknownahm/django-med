@@ -1,9 +1,8 @@
-<!-- equipment_list.html -->
 {% load static %}
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Medical Equipment List</title>
+    <title>وبسایت تجهیزات پزشکی</title>
     <link
       rel="stylesheet"
       type="text/css"
@@ -11,14 +10,13 @@
     />
   </head>
   <body>
-    {% load static %}
     <header class="main-header">
       <div class="logo">وبسایت تجهیزات پزشکی</div>
       <nav class="main-nav">
         <ul>
-          <li><a href="#">خانه</a></li>
-          <li><a href="#">درباره ما</a></li>
-          <li><a href="#">تماس با ما</a></li>
+          <!-- <li><a href="">خانه</a></li> -->
+          <!-- <li><a href="/about">درباره ما</a></li>
+          <li><a href="/contact">تماس با ما</a></li> -->
           <div class="search-container" style="margin-right: 10px;">
             <input type="text" id="search-input" placeholder="محصول مورد نظر خود را جستجو کنید...">
           </div>
@@ -38,7 +36,7 @@
         />
 
         <!-- Product name -->
-        <div class="product-name">{{ product.name }}</div>
+        <div class="product-name" ><a href="{{product.url}}" style="color: #068FFF;text-decoration: underline;">{{ product.name }}</a></div>
 
         <!-- Product description -->
         <div class="product-description">{{ product.description }}</div>
@@ -118,5 +116,9 @@
         filterProducts(searchText);
       });
     });
+    
+
+
+    
   </script>
 </html>
